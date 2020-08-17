@@ -6,6 +6,8 @@ import {
   reqUpdateUser,
 } from "@api/acl/user";
 
+// 上面引入了一些异步请求的接口函数
+
 import {
   GET_USER_LIST,
   REMOVE_USER,
@@ -13,9 +15,13 @@ import {
   UPDATE_USER,
   ADD_USER,
 } from "./constants";
+// 引入常量
+
 /**
  * 获取/搜索 用户分页数据
  */
+
+// 配合异步action的 同步的action,不用暴漏,只在异步 action 中使用
 const getUserListSync = (list) => ({
   type: GET_USER_LIST,
   data: list,

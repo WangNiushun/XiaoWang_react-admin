@@ -1,4 +1,6 @@
 import request from "@utils/request";
+// 引入的request是二次封装的 axios
+
 
 const BASE_URL = "/admin/acl/user";
 
